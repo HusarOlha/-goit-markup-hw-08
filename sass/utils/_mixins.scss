@@ -1,0 +1,37 @@
+@mixin centeredFlex($type) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: $type;
+}
+@mixin desktop1199max {
+  @media screen and (max-width: 1199px) {
+    @content;
+  }
+}
+@mixin desktop1200min {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}
+@mixin tablets767max {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+@mixin tablets768min {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+// Mobile
+@mixin phones480min {
+  @media screen and (min-width: 480px) {
+    @content;
+  }
+}
+@mixin phones479max {
+  @media screen and (max-width: 479px) {
+    @content;
+  }
+}

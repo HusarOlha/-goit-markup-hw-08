@@ -1,0 +1,23 @@
+%flex-wrap {
+    display:flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+%flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+%trans-dur-time {
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+%flex-icon {
+    display: flex;
+    align-items: center;
+    position: absolute;
+}
+%flex-align {
+    display: flex;
+    align-items: center;
+}

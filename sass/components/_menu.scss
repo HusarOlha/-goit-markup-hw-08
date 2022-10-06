@@ -1,0 +1,136 @@
+.menu-btn {
+  @include centeredFlex(nowrap);
+  margin-left: auto;
+
+  width: 40px;
+  height: 40px;
+  padding: 0;
+
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  @include tablets768min {
+    display: none;
+  }
+}
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  padding-left: 40px;
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: var(--primary-text-color);
+
+  transform: translateX(100%);
+  transition: transform 450ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &.is-open {
+    transform: translateX(0);
+  }
+}
+.menu {
+  margin-bottom: auto;
+}
+.menu-toggle {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+
+  width: 40px;
+  height: 40px;
+  padding: 0;
+
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  color: var(--title-text-color);
+  transition: fill 450ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus {
+  color: var(--accent-color);
+}
+.menu-toggle__svg {
+  fill: currentColor;
+}
+.menu-navigation {
+  @include phones479max {
+    font-size: 30px;
+  }
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+}
+.menu-navigation__link--current {
+  color: var(--accent-color);
+}
+.menu {
+  margin-bottom: auto;
+}
+.menu-navigation__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+.menu-contacts__link--tel {
+  @include phones479max {
+    font-size: 20px;
+  }
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: var(--accent-color);
+  margin-bottom: 32px;
+}
+.menu-contacts__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+.menu-contacts__item--email {
+  margin-bottom: 64px;
+}
+.menu-contacts__link--email {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.16;
+  letter-spacing: 0.02em;
+  color: var(--secondary-text-color);
+}
+
+.menu-link {
+  @include phones479max {
+    font-size: 14px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  display: flex;
+  align-items: flex-start;
+}
+
+.menu-link__socials {
+  @include phones479max {
+    font-size: 12px;
+    padding-left: 4px;
+  }
+  padding-right: 10px;
+
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+
+  border-right: 1px solid var(--modal-border);
+  color: var(--accent-color);
+  &:not(:first-child) {
+    padding-left: 10px;
+  }
+}

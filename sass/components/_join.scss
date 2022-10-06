@@ -1,0 +1,123 @@
+.join__list {
+  @media desktop1199max {
+    @include centeredFlex(nowrap);
+  }
+  display: flex;
+  gap: 10px;
+}
+.join {
+  @include tablets767max {
+    margin-bottom: 60px;
+  }
+  @include desktop1200min {
+    display: block;
+    margin-right: auto;
+  }
+}
+
+.join__title {
+  @include desktop1199max {
+    @include centeredFlex(nowrap);
+  }
+  color: var(--primary-text-color);
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  margin-bottom: 20px;
+}
+
+.join__svg {
+  @extend %flex-center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--background-second-color);
+  color: var(--primary-text-color);
+  transition-property: color, background-color;
+  @extend %trans-dur-time;
+  &:hover,
+  &:focus {
+    color: var(--primary-text-color);
+    background-color: var(--accent-color);
+  }
+}
+.join__icon {
+  fill: currentColor;
+}
+.sign__class {
+  @include desktop1200min {
+    display: flex;
+    align-items: baseline;
+  }
+}
+.sign__title {
+  @include desktop1199max {
+    @include centeredFlex(nowrap);
+  }
+  color: var(--primary-text-color);
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-align: start;
+  margin-bottom: 20px;
+}
+.sign__input {
+  width: 450px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  background-color: transparent;
+  margin-bottom: 20px;
+  // margin-right: 12px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  color: var(--primary-text-color);
+  padding-left: 16px;
+  &::placeholder {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+  @include tablets768min {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @include desktop1200min {
+    display: flex;
+    margin-right: 12px;
+    margin-left: 0;
+    margin-bottom: 0;
+    width: 358px;
+  }
+}
+.sign__button {
+  @include desktop1199max {
+    @include centeredFlex(nowrap);
+  }
+}
+.sign__btn {
+  @extend %flex-align;
+  padding: 12px 28px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  background-color: var(--accent-color);
+  color: var(--primary-text-color);
+  border-radius: 4px;
+  cursor: pointer;
+  @include desktop1200min {
+    padding: 10px 28px;
+  }
+}
+
+.sign__svg {
+  margin-left: 10px;
+  margin-top: auto;
+  margin-bottom: auto;
+}

@@ -1,0 +1,109 @@
+/* Footer */
+
+.footer {
+  background-color: var(--footer-color);
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.container-footer {
+  @include tablets767max {
+    @include centeredFlex(nowrap);
+    flex-direction: column;
+  }
+  @include desktop1200min {
+    display: flex;
+    align-items: baseline;
+  }
+}
+.footer-tablet {
+  @include tablets768min {
+    display: flex;
+    justify-content: space-around;
+  }
+  @include desktop1200min {
+    display: flex;
+    align-items: baseline;
+    margin-right: auto;
+  }
+}
+.footer-logo {
+  @include desktop1200min {
+    margin-right: 70px;
+  }
+}
+.footer-logo__text {
+  @include desktop1199max {
+    @include centeredFlex(nowrap);
+  }
+  color: var(--primary-text-color);
+  font-family: Raleway;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.16;
+  text-decoration: none;
+  margin-bottom: 20px;
+  @include desktop1200min {
+    display: block;
+    font-weight: 700;
+    line-height: 1.19;
+    margin-bottom: 20px;
+  }
+}
+
+.footer-logo__accent {
+  font-family: Raleway;
+  color: var(--accent-color);
+  font-family: Raleway;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.16;
+  @include desktop1200min {
+    font-weight: 700;
+    line-height: 1.19;
+  }
+}
+.address__item {
+  @include desktop1199max {
+    display: flex;
+    justify-content: center;
+  }
+  margin-bottom: 8px;
+  &:last-child {
+    margin-bottom: 60px;
+  }
+  @include desktop1200min {
+    margin-bottom: 9px;
+    &:last-child {
+      margin-bottom: 0px;
+    }
+  }
+}
+.address__map {
+  display: block;
+  font-family: Roboto;
+  color: var(--primary-text-color);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7;
+  text-decoration: none;
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+.address__cont {
+  display: block;
+  color: #ffffff99;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7;
+  text-decoration: none;
+  transition-property: color;
+  @extend %trans-dur-time;
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}

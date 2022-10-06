@@ -1,0 +1,42 @@
+/* Clients */
+
+.client {
+  @include centeredFlex(wrap);
+  gap: 30px;
+}
+
+.client__item {
+  @include tablets767max {
+    flex-basis: calc((100% - 60px) / 2);
+  }
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc((100% - 150px) / 6);
+  }
+}
+
+.client__link {
+  @include centeredFlex(nowrap);
+  height: 92px;
+  border: 1px solid var(--sec-border-color);
+  border-radius: 5px;
+  color: var(--sec-border-color);
+  transition-property: color, border;
+  @extend %trans-dur-time;
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+  }
+  @include tablets767max {
+    width: 210px;
+  }
+  @include tablets768min {
+    width: 226px;
+  }
+  @include desktop1200min {
+    width: 170px;
+  }
+}
+.client__svg {
+  fill: currentColor;
+}

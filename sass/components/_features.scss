@@ -63,7 +63,7 @@
   line-height: 1.7;
 }
 .features-list__title {
-  @include tablets767max(max-width: 767px) {
+  @include tablets767max {
     @include centeredFlex(nowrap);
   }
   color: var(--black-color);

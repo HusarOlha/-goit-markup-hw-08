@@ -40,9 +40,6 @@
   background-color: var(--background-color);
   border-radius: 4px;
   margin-bottom: 30px;
-  @include phones479max {
-    height: 100px;
-  }
   @include phones480min {
     width: 450px;
     height: 120px;

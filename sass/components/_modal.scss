@@ -15,8 +15,12 @@
   visibility: hidden;
 }
 .modal {
-  width: 450px;
-  height: 609px;
+  width: 90%;
+  height: 90%;
+  @media screen and (min-width: 480px) {
+    width: 450px;
+    height: 609px;
+  }
   background-color: var(--primary-text-color);
   position: absolute;
   top: 50%;

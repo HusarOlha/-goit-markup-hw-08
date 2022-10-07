@@ -68,7 +68,7 @@
   margin-bottom: 20px;
 }
 .sign__input {
-  width: 450px;
+  width: 100%;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   background-color: transparent;
@@ -81,6 +81,9 @@
   &::placeholder {
     font-size: 16px;
     line-height: 1.25;
+  }
+  @media screen and (min-width: 480px) {
+    width: 450px;
   }
   @include tablets768min {
     display: block;

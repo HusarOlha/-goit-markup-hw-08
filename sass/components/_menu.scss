@@ -128,9 +128,11 @@
   line-height: 1.22;
   letter-spacing: 0.02em;
 
-  border-right: 1px solid var(--modal-border);
   color: var(--accent-color);
   &:not(:first-child) {
     padding-left: 10px;
+  }
+  &:not(:last-child) {
+    border-right: 1px solid var(--modal-border);
   }
 }

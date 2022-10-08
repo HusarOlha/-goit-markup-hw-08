@@ -19,6 +19,7 @@
   @include tablets768min {
     display: flex;
     justify-content: space-around;
+    align-items: baseline;
   }
   @include desktop1200min {
     display: flex;
